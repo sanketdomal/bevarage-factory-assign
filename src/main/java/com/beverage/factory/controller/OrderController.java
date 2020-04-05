@@ -22,17 +22,7 @@ public class OrderController {
 	MenuService menuService;
 	
 	@Autowired
-	BillingService billingService;
-	
-	@RequestMapping("/")
-	public Order populateMenu() {
-		
-		ArrayList<String> arr= new ArrayList<String>();
-		arr.add("Chai");
-		arr.add("Cofee");
-		Order order1 = new Order(arr, 20);
-		return order1;
-	}
+	BillingService billingService;	
 	
 	@RequestMapping(method = RequestMethod.POST ,path="/order")
 	public Order placeOrder(@RequestBody Order order1) throws Exception {
